@@ -1,0 +1,25 @@
+@import '../../../../Styles/variables.scss';
+
+.day_info {
+  @include light;
+  position: relative;
+  padding: 40px;
+  max-width: 750px;
+  width: 100%;
+}
+.day_items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}

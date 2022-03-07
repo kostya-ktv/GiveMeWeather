@@ -1,0 +1,27 @@
+@import '../../../../../Styles/variables.scss';
+.item {
+  display: flex;
+}
+.indicator,
+.indicator_name {
+  margin-right: 20px;
+}
+
+.indicator {
+  @include light;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicator_name {
+  font-size: 14px;
+  color: $base-color;
+}
+
+.indicator_value {
+  font-size: 14px;
+  color: $lite-color;
+}

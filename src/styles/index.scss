@@ -1,11 +1,15 @@
 @import '~normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@300;500;800&display=swap');
-
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Fredericka the Great', cursive;
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 30px;
 }

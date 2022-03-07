@@ -1,5 +1,4 @@
-import React from 'react'
-import GlobalSVGSelector from '../GlobalSVGSelector/GlobalSVGSelector'
+import GlobalSVGSelector from '../../../../Common/GlobalSVGSelector/GlobalSVGSelector'
 import styles from './currentDay.module.scss'
 
 const CurrentDay = () => {

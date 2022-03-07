@@ -1,5 +1,5 @@
-import GlobalSVGSelector from '../../Components/GlobalSVGSelector/GlobalSVGSelector'
-import Selector from '../../Components/CitySelector/CitySelector'
+import GlobalSVGSelector from '../../Common/GlobalSVGSelector/GlobalSVGSelector'
+import CitySelector from '../../Pages/Home/Components/CitySelector/CitySelector'
 import styles from './header.module.scss'
 
 type Props = {}
@@ -21,7 +21,7 @@ const Header = (props: Props) => {
          <div className={styles.change_theme}>
             <GlobalSVGSelector id='change-theme'/>
          </div>
-         <Selector/>
+         <CitySelector/>
       </div>
     </header>
   )
