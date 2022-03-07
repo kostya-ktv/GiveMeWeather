@@ -1,4 +1,4 @@
-import { GlobalSVGSelectorProps } from "../../../Common/GlobalSVGSelector/globalSVGSelector.props"
+import { tabs } from "./Pages/Home/Components/Week/dummy-data"
 
 export type ItemDetailType = {
    iconId: IconName
@@ -14,4 +14,7 @@ export type DaysType = {
    info: string
 }
 export type IconName = 'header-logo' | 'change-theme' | 'dark' | 'sun'
-   | 'wind' | 'precipitation' | 'pressure' | 'temp' 
+   | 'wind' | 'precipitation' | 'pressure' | 'temp' | 'close'
+
+export type TabsType = typeof tabs
+

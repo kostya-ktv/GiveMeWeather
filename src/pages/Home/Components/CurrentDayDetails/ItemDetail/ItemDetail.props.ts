@@ -1,4 +1,4 @@
-import { ItemDetailType } from "../../types";
+import { ItemDetailType } from "../../../../../types";
 
 export interface ItemDetailProps {
    item: ItemDetailType

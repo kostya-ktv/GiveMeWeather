@@ -3,9 +3,10 @@
 .day_info {
   @include light;
   position: relative;
-  padding: 40px;
-  max-width: 750px;
+  padding: 20px;
+  max-width: 650px;
   width: 100%;
+  background-color: var(#{--components-background-default});
 }
 .day_items {
   position: relative;

@@ -1,15 +1,16 @@
 import styles from './currentDayDetail.module.scss'
 import cloudImg from '../../../../Assets/Images/cloud.png'
-import { items } from './dummy-data'
 import ItemDetail from './ItemDetail/ItemDetail'
-import { ItemDetailType } from '../types'
+import { ItemDetailType } from '../../../../types'
+import { FC } from 'react'
+import { CurrentDayDetailsProps } from './CurrentDayDetail.props'
 
-const CurrentDayDetail = () => {
+const CurrentDayDetail:FC<CurrentDayDetailsProps> = ({data}) => {
   
   return (
     <div className={styles.day_info}>
       <div className={styles.day_items}>
-       {items.map((el: ItemDetailType) => 
+       {data.map((el: ItemDetailType) => 
          <ItemDetail key={el.iconId} item={el}/>
        )}
       </div>

@@ -1,11 +1,16 @@
 import GlobalSVGSelector from '../../Common/GlobalSVGSelector/GlobalSVGSelector'
+import { Theme } from '../../Context/ThemeContext/ThemeContext'
+import { useTheme } from '../../Hooks/useTheme'
 import CitySelector from '../../Pages/Home/Components/CitySelector/CitySelector'
 import styles from './header.module.scss'
 
-type Props = {}
+const Header = () => {
 
-const Header = (props: Props) => {
-
+   const theme = useTheme();
+   function change() {
+      //@ts-ignore
+      theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
+    }
   
   return (
     <header className={styles.header}>
@@ -18,7 +23,7 @@ const Header = (props: Props) => {
          </div>
       </div>
       <div className={styles.wrapper}>
-         <div className={styles.change_theme}>
+         <div className={styles.change_theme} onClick={change}>
             <GlobalSVGSelector id='change-theme'/>
          </div>
          <CitySelector/>

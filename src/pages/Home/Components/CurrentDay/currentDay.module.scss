@@ -4,8 +4,10 @@
   @include light;
   padding: 20px;
   max-width: 300px;
+  height: 200px;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 2vw;
+  background-color: var(#{--components-background-default});
 }
 
 .top_block {
@@ -13,26 +15,26 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 
   svg {
     width: 119px;
     height: 119px;
   }
   .temp {
-    font-size: 96px;
+    font-size: 4em;
     font-weight: 500;
     color: $primary-color;
   }
   .day_name {
-    font-size: 40px;
-    color: $lite-color;
+    font-size: 2em;
+    color: var(#{--text-color-default});
   }
 }
 .bottom_block {
   .city,
   .time {
     color: $base-color;
-    font-size: 25px;
+    font-size: 1em;
   }
 }

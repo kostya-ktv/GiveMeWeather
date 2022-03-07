@@ -17,11 +17,11 @@
 }
 
 .indicator_name {
-  font-size: 14px;
+  font-size: 1rem;
   color: $base-color;
 }
 
 .indicator_value {
-  font-size: 14px;
-  color: $lite-color;
+  font-size: 1.1rem;
+  color: var(#{--text-color-default});
 }

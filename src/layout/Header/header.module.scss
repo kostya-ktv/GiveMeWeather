@@ -1,9 +1,10 @@
+@import '../../Styles/variables.scss';
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .wrapper {
@@ -14,17 +15,19 @@
 .logo {
   margin-right: 20px;
   svg {
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
   }
 }
 
 .title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.1rem;
+  color: $primary-color;
 }
 
 .change_theme {
+  cursor: pointer;
   margin-right: 20px;
 }

@@ -5,11 +5,15 @@
 *::before {
   box-sizing: border-box;
 }
+html {
+  font-size: 15px;
+}
 body {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Montserrat', cursive;
+  background-color: var(#{--body-background-default});
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px 30px 0px 30px;
 }

@@ -1,0 +1,45 @@
+@import '../../../../Styles/variables.scss';
+.popup {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11111;
+}
+.box {
+  @include light;
+  position: relative;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: fit-content !important;
+  font-size: 0.7rem;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+.close {
+  position: absolute;
+  right: 10px;
+  svg {
+    transition: all 0.3s;
+    height: 20px;
+    width: 20px;
+    fill: rgb(238, 241, 5);
+    animation: spin 4s infinite;
+  }
+  &:hover {
+    cursor: pointer;
+    svg {
+      fill: rgb(226, 28, 28);
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

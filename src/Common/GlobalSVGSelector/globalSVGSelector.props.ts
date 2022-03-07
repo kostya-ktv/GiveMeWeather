@@ -1,4 +1,4 @@
-import { IconName } from "../../Pages/Home/Components/types";
+import { IconName } from "../../types";
 
 export interface GlobalSVGSelectorProps {
    id: IconName

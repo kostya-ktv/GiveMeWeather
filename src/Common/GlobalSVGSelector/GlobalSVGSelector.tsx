@@ -6,6 +6,7 @@ import Precipitation from '../../Assets/Images/Icons/item_detail/precipitation.s
 import Pressure from '../../Assets/Images/Icons/item_detail/pressure.svg'
 import Temp from '../../Assets/Images/Icons/item_detail/temp.svg'
 import Wind from '../../Assets/Images/Icons/item_detail/wind.svg'
+import Close from '../../Assets/Images/Icons/item_detail/close.svg'
 import { GlobalSVGSelectorProps } from './globalSVGSelector.props'
 
 
@@ -20,6 +21,7 @@ const GlobalSVGSelector = ({id}: GlobalSVGSelectorProps) => {
       case 'temp': return <Temp/>
       case 'wind': return <Wind/>
       case 'pressure': return <Pressure/>
+      case 'close': return <Close/>
    
       default: return null
    }

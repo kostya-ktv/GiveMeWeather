@@ -1,9 +1,24 @@
+import { tabs } from '../dummy-data'
 import styles from '../week.module.scss'
-type Props = {}
 
-const Tabs = (props: Props) => {
+const Tabs = () => {
   return (
-    <div>Tabs</div>
+
+    <div className={styles.tabs_wrapper}>
+       <div className={styles.tabs}>
+            {tabs.map(el => (
+            <div key={el.value} className={styles.tab}>
+               {el.value}
+            </div>))}  
+      </div>
+            <div className={styles.cancel}>
+              Cancel
+             </div>
+        
+         
+    </div>
+      
+
   )
 }
 
