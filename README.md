@@ -10,7 +10,7 @@
 ## Available Scripts
 =======
 ### Available Scripts
->>>>>>> b3491018f3e23503c5a5ca19a81e67430be2f67e
+
 ### `npm start`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `npm test`
