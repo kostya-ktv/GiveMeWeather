@@ -12,13 +12,11 @@ const Card:FC<CardProps> = ({dayItem}) => {
 
   return (
      <>
-      {isShowPopUp && <PopUp/>}
-      <div className={styles.card} onClick = {() => setShowPopUp(!isShowPopUp)}>
+      {isShowPopUp && <PopUp isShow={setShowPopUp} day={dayItem}/>}
+      <div className={styles.card} onClick = {() => setShowPopUp(true)}>
          <div className={styles.day}>
-            {new Date(dt * 1000).toLocaleDateString('en-GB', { weekday: 'long'})}
-         </div>
-         <div className={styles.day_info}>
-            {new Date(dt * 1000).toLocaleDateString('en-GB')}
+            {new Date(dt * 1000).toLocaleDateString('en-GB', { weekday: 'long'})}<br></br>
+            <small>{new Date(dt * 1000).toLocaleDateString('en-GB')}</small>
          </div>
 
          <div className={styles.temp_day}>

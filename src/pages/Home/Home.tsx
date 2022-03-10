@@ -16,7 +16,10 @@ const Home = () => {
           <CurrentDay day={daily}/>
           <CurrentDayDetail day={daily}/>
         </div>
-        <Week days={forecast}/>
+        <div className={styles.week}>
+          <Week days={forecast}/>
+        </div>
+        
         
     </div>
 

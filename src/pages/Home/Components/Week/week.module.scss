@@ -1,5 +1,6 @@
 @import '../../../../Styles/variables.scss';
 .week {
+  transition: all 0.5s;
   @include light;
   display: flex;
   justify-content: space-between;
@@ -12,6 +13,7 @@
 }
 
 .card {
+  transition: all 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,18 +22,12 @@
   border-radius: 10px;
   padding: 5px;
   flex: 1;
-  transition: 0.3s;
   cursor: pointer;
   margin: 0 5px 0 5px;
   .day {
     margin-bottom: 7px;
     font-size: 0.8rem;
     color: var(#{--text-color-default});
-  }
-  .day_info {
-    font-size: 0.55rem;
-    margin-bottom: 12px;
-    color: $base-color;
   }
   .temp_day {
     font-size: 1rem;
@@ -65,3 +61,28 @@
     box-shadow: var(#{--card-shadow-default});
   }
 }
+
+@media (max-width: 650px) {
+  .week {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 410px;
+    margin: 5px;
+    width: 100%;
+  }
+  .card{ 
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5px 0 5px;
+    margin: 3px;
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .week {
+    margin: 0px;
+  }
+
+}
+

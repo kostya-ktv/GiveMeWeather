@@ -14,6 +14,7 @@ const Header = () => {
   
   return (
     <header className={styles.header}>
+      
       <div className={styles.wrapper}>
          <div className={styles.logo}>
          <SVGSelector id='header-logo'/>
@@ -22,9 +23,11 @@ const Header = () => {
          <div className={styles.title}>
             Give-me-weather!
          </div>
+         
       </div>
-      <div className={styles.wrapper}>
-         <div className={styles.change_theme} onClick={change}>
+      
+      <div className={styles.wrapper}>     
+      <div className={styles.change_theme} onClick={change}>
             <SVGSelector id='dark'/>     
          </div>
          <CitySelector/>
