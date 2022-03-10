@@ -24,13 +24,14 @@ const Card:FC<CardProps> = ({dayItem}) => {
             {Math.ceil(feels_like.day)}°
             
          </div>
+        
+         <div className={styles.info}>
+            {weather[0].description}
+         </div>
          <div className={styles.temp_night}>
          <SVGSelector id='moon'/>
             {Math.ceil(feels_like.night)}°
             
-         </div>
-         <div className={styles.info}>
-            {weather[0].description}
          </div>
       </div>
     </>
