@@ -3,12 +3,10 @@
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/day.jpg?raw=true)
 
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/night.jpg?raw=true)
-<<<<<<< HEAD
+
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/medium.jpg?raw=true)
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/mobile.jpg?raw=true)
 
-## Available Scripts
-=======
 ### Available Scripts
 
 ### `npm start`
