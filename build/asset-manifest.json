@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.44f76388.css",
+    "main.js": "/static/js/main.e918cceb.js",
+    "static/media/FrederickatheGreat-Regular.ttf": "/static/media/FrederickatheGreat-Regular.69cef5dc99024da59d1e.ttf",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3068cdb43142f5625baf.ttf",
+    "index.html": "/index.html",
+    "main.44f76388.css.map": "/static/css/main.44f76388.css.map",
+    "main.e918cceb.js.map": "/static/js/main.e918cceb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44f76388.css",
+    "static/js/main.e918cceb.js"
+  ]
+}
