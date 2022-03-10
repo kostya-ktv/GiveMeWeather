@@ -1,16 +1,14 @@
+import { FC } from 'react'
 import Card from './Card/Card'
-import { days } from './dummy-data'
-import Tabs from './Tabs/Tabs'
 import styles from './week.module.scss'
+import { WeekProps } from './week.props'
 
-type Props = {}
 
-const Week = (props: Props) => {
+const Week:FC<WeekProps> = ({days}) => {
   return (
      <>
-     <Tabs/>
     <div className={styles.week}>
-       {days.map((el,i) => <Card key={i} dayItem={el}/>)}
+       {days.daily.length > 1 && days.daily.map((el, i) => i !== 0 && <Card dayItem={el} key={i}/>)}
     </div>
     
     </>

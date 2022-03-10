@@ -1,18 +1,20 @@
-import { ReactNode, useState } from 'react';
-import { changeCssRootVariables } from '../../Util/ChangeCssVariables';
-import { storage } from '../../Util/Storage';
+import { FC, ReactNode, useState } from 'react';
+import { changeCssRootVariables } from '../../Common/ChangeCssVariables';
+import { storage } from '../../Common/Storage';
 import { Theme, ThemeContext } from './ThemeContext';
 
 interface Props {
   children: ReactNode;
 }
 
-export const ThemeProvider = ({ children, ...props }: Props) => {
+export const ThemeProvider:FC<Props> = ({ children, ...props }) => {
+     
   const [theme, setTheme] = useState<Theme>(
     storage.getItem('theme') || Theme.LIGHT
   );
   changeCssRootVariables(theme);
-  function changeTheme(theme: Theme) {
+
+  const changeTheme = (theme: Theme) => {
     storage.setItem('theme', theme);
     setTheme(theme);
     changeCssRootVariables(theme);

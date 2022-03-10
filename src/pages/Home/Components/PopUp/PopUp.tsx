@@ -1,4 +1,4 @@
-import GlobalSVGSelector from '../../../../Common/GlobalSVGSelector/GlobalSVGSelector'
+import SVGSelector from '../../../../Common/SVGSelector/SVGSelector'
 import styles from './popup.module.scss'
 
 const PopUp = () => {
@@ -7,7 +7,7 @@ const PopUp = () => {
       <div className={styles.box}>
         <div className={styles.header}>
           <div className={styles.close}>
-            <GlobalSVGSelector id='close'/>
+            <SVGSelector id='close'/>
           </div>
           <h1>HEADER</h1>
           <h2>ICON</h2>

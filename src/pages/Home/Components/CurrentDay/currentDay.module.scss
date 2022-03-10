@@ -2,12 +2,13 @@
 
 .current_day {
   @include light;
+  margin-right: 20px;
   padding: 20px;
-  max-width: 300px;
+  max-width: 350px;
   height: 200px;
   width: 100%;
-  margin-right: 2vw;
   background-color: var(#{--components-background-default});
+  font-family: 'Fredericka';
 }
 
 .top_block {
@@ -27,7 +28,7 @@
     color: $primary-color;
   }
   .day_name {
-    font-size: 2em;
+    font-size: 1.2em;
     color: var(#{--text-color-default});
   }
 }
@@ -35,6 +36,6 @@
   .city,
   .time {
     color: $base-color;
-    font-size: 1em;
+    font-size: 2em;
   }
 }

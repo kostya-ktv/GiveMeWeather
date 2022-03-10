@@ -1,37 +1,51 @@
+//@ts-nocheck
+import cities from 'cities.json';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Select from 'react-select'
-import { Theme } from '../../../../Context/ThemeContext/ThemeContext';
-import { useTheme } from '../../../../Hooks/useTheme';
-import { options } from './citySelector.config'
-
+import { useConfigureSelectorStyle } from '../../../../Hooks/useConfigureSelectorStyle';
+import { fetchAndSelectCityByCoord } from '../../../../Services/weather-service';
+import { SPINNER_STOP, SPINNER_START } from '../../../../store/constants';
 
 const CitySelector = () => {
-  const theme = useTheme();
-  const colourStyles = {
-    control: (styles: any) => ({
-      ...styles,
-      backgroundColor:
-   
-        theme.theme === Theme.DARK ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
-      width: '194px',
-      height: '37px',
-      border: 'none',
-      borderRadius: '10px',
-      zIndex: 100,
-    }),
-    singleValue: (styles: any) => ({
-      ...styles,
+  const colourStyles = useConfigureSelectorStyle()
+  const dispatch = useDispatch()
+  const [search, setSearch] = useState<string>('')
+  const [options, setOptions] = useState<Array<{value: string, label: string}>>()
+
   
-      color: theme.theme === Theme.DARK ? '#fff' : '#000',
-    }),
-  };
- 
+  useEffect(() => {
+    
+    if(search.length > 2 && search.length < 4) {
+      dispatch({type: SPINNER_START})
+
+        setTimeout(() => {  
+        const filtered = cities.filter(el => el.name.includes(search))  
+        const options = filtered.map((el:any) => {
+          let option = {
+              value: JSON.stringify({lat: el.lat, lon: el.lng}),
+              label: `${el.name}-${el.country}`
+            } 
+            return option
+        }) 
+        setOptions(options)
+
+      dispatch({type: SPINNER_STOP})
+      }, 2000)   
+    }
+  }, [search])
+
   return (
     <>
       <Select 
-         options={options} 
+         options={options && options} 
+         autoFocus
+         onChange={(e) => fetchAndSelectCityByCoord(e, dispatch)}
          styles={colourStyles}
-         defaultValue={options[0]}
-      />
+         value={search}
+         isSearchable={true}   
+         onKeyDown={(e) => setSearch(e.target.value)}
+        />
     </>
   )
 }

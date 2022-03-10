@@ -1,4 +1,4 @@
-import GlobalSVGSelector from '../../Common/GlobalSVGSelector/GlobalSVGSelector'
+import SVGSelector from '../../Common/SVGSelector/SVGSelector'
 import { Theme } from '../../Context/ThemeContext/ThemeContext'
 import { useTheme } from '../../Hooks/useTheme'
 import CitySelector from '../../Pages/Home/Components/CitySelector/CitySelector'
@@ -16,7 +16,8 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.wrapper}>
          <div className={styles.logo}>
-         <GlobalSVGSelector id='header-logo'/>
+         <SVGSelector id='header-logo'/>
+         
          </div>
          <div className={styles.title}>
             Give-me-weather!
@@ -24,7 +25,7 @@ const Header = () => {
       </div>
       <div className={styles.wrapper}>
          <div className={styles.change_theme} onClick={change}>
-            <GlobalSVGSelector id='change-theme'/>
+            <SVGSelector id='dark'/>     
          </div>
          <CitySelector/>
       </div>

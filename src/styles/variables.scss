@@ -1,10 +1,10 @@
-$primary-color: #4793ff;
+$primary-color: rgb(74, 141, 197);
 $light-color: #000;
 $base-color: #939cb0;
 $dark-color: #fff;
 
-$body-background-dark: #000000;
-$body-background-light: #ffffff;
+$body-background-dark: #2b2b2b;
+$body-background-light: #e6e6e6;
 
 $components-background-dark: #4f4f4f;
 $components-background-light: #fff;
@@ -14,10 +14,16 @@ $card-background-dark: #2e3035;
 
 $card-box-shadow-light: 0px 3px 20px rgba(12, 12, 12, 0.28);
 $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
+
 @mixin light {
   background: rgb(255, 255, 255);
   box-shadow: 2px 4px 25px -3px rgba(92, 92, 92, 0.25);
   border-radius: 20px;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {

@@ -2,18 +2,21 @@ import CurrentDay from './Components/CurrentDay/CurrentDay'
 import CurrentDayDetail from './Components/CurrentDayDetails/CurrentDayDetail'
 import Week from './Components/Week/Week'
 import styles from './home.module.scss'
-import { items } from './Components/CurrentDayDetails/dummy-data'
+import { useSelector } from 'react-redux'
+import { GlobalStateType } from '../../store/types/types'
 
 const Home = () => {
+  const {daily, forecast} = useSelector((state:GlobalStateType) => state)
+  
   return (
   <>
     
     <div className={styles.home}>
         <div className={styles.wrapper}>
-          <CurrentDay/>
-          <CurrentDayDetail data={items}/>
+          <CurrentDay day={daily}/>
+          <CurrentDayDetail day={daily}/>
         </div>
-        <Week/>
+        <Week days={forecast}/>
         
     </div>
 

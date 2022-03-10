@@ -1,20 +1,38 @@
 import styles from './currentDayDetail.module.scss'
-import cloudImg from '../../../../Assets/Images/cloud.png'
-import ItemDetail from './ItemDetail/ItemDetail'
-import { ItemDetailType } from '../../../../types'
 import { FC } from 'react'
-import { CurrentDayDetailsProps } from './CurrentDayDetail.props'
+import { CurrentDayProps } from '../CurrentDay/currentDay.props'
+import SVGSelector from '../../../../Common/SVGSelector/SVGSelector'
 
-const CurrentDayDetail:FC<CurrentDayDetailsProps> = ({data}) => {
-  
+const CurrentDayDetail:FC<CurrentDayProps> = ({day}) => {
+  const {main, weather, wind} = day
+
   return (
     <div className={styles.day_info}>
-      <div className={styles.day_items}>
-       {data.map((el: ItemDetailType) => 
-         <ItemDetail key={el.iconId} item={el}/>
-       )}
+      <div className={styles.item}>         
+          <SVGSelector id='temp'/>
+          <p>Temperature: 
+            <span> {main.temp}°</span>
+          </p>
       </div>
-        <img src={cloudImg} alt='cloud' className={styles.cloud}/>
+      <div className={styles.item}>      
+        <SVGSelector id='pressure'/>
+        <p>Pressure:
+            <span> {main.pressure} Hg.</span>
+        </p>
+      </div>
+      <div className={styles.item}>   
+        <SVGSelector id='precipitation'/>
+        <p>Precipitation: 
+            <span> {weather[0].description}</span>
+        </p>
+      </div>
+      <div className={styles.item}>   
+        <SVGSelector id='wind'/>
+        <p>Wind:
+            <span> {wind.speed} m/s</span>
+        </p>
+      </div>
+
     </div>
   )
 }

@@ -1,5 +1,5 @@
-import { DaysType } from "../../../../../types";
+import { ForecastDay } from "../../../../../store/types/ForecastResponseType";
 
 export interface CardProps {
-   dayItem: DaysType
+   dayItem: ForecastDay
 }
