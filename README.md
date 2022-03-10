@@ -2,6 +2,8 @@
 
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/light.jpg?raw=true)
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/night.jpg?raw=true)
+![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/medium.jpg?raw=true)
+![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/mobile.jpg?raw=true)
 
 ## Available Scripts
 ### `npm start`
