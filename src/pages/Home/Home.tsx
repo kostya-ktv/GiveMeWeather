@@ -18,10 +18,9 @@ const Home = () => {
         </div>
         <div className={styles.week}>
           <Week days={forecast}/>
-        </div>
-        
-        
+        </div>      
     </div>
+    <a rel='noreferrer' href='https://github.com/kostya-ktv' target='_blank'>© Created by Kostya Kotov, 2022</a>
 
    </>
   )

@@ -16,7 +16,11 @@
     align-items: flex-start;
   }
 }
-
+a {
+  text-decoration: none;
+  font-size: 0.5rem;
+  color: rgb(99, 99, 99);
+}
 @media (max-width: 540px) {
   .wrapper {
     flex-direction: column;
