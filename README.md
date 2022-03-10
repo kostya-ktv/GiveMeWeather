@@ -2,7 +2,7 @@
 
 
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/night.jpg?raw=true)
-![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/light.jpg?raw=true)
+![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/day.jpg?raw=true)
 ## Available Scripts
 ### `npm start`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
