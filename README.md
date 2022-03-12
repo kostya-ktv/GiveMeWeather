@@ -1,4 +1,5 @@
 # Getting Started with GIVE-ME-WEATHER <React App>
+  ## CLI Client [https://github.com/kostya-ktv/GiveMeWeatherCLIClient](https://github.com/kostya-ktv/GiveMeWeatherCLIClient)
 # Light Theme & Dark Theme
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/day.jpg?raw=true)
 ![alt text](https://github.com/kostya-ktv/GiveMeWeather/blob/main/publicImages/night.jpg?raw=true)
